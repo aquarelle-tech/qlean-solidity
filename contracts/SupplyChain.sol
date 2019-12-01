@@ -1,7 +1,4 @@
-
-
 pragma solidity ^0.5.0;
-
 
 contract SupplyChain {
 
@@ -79,10 +76,6 @@ contract SupplyChain {
   modifier Processed(uint hash) { bolsas[hash].state == 4; _; }
   modifier Recycled(uint hash) { bolsas[hash].state == 5; _; }
   modifier Disposed(uint hash) { bolsas[hash].state == 6; _; }
-
-
-
-
 
   constructor() public {
     /* Here, set the owner as the person who instantiated the contract
